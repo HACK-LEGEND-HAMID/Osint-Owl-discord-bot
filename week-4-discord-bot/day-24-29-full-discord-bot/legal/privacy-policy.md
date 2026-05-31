@@ -50,4 +50,4 @@ OSINT-Owl collects minimal data:
 This bot is not intended for users under 13 years of age.
 
 ## 10. Contact
-**Email:**droxsea@gmail.com
+**Email:** droxsea@gmail.com
