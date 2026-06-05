@@ -15,6 +15,7 @@ class MyBot(commands.Bot):
     async def setup_hook(self):
         await self.load_extension("cogs.media")
         await self.load_extension("cogs.moderation")
+        await self.load_extension("cogs.resources_cog")
         await self.tree.sync()
 
 bot = MyBot()
