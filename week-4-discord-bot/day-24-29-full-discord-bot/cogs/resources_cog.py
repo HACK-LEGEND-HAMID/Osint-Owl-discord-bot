@@ -2,9 +2,10 @@ import discord
 from discord.ext import commands
 from discord import app_commands
 from .resources.general_search import GENERAL_SEARCH
-
+from .resources.github_cyber import GITHUB_CYBER
 RESOURCES = {
-        "general_search":GENERAL_SEARCH
+        "general_search":GENERAL_SEARCH,
+        "github_cyber":GITHUB_CYBER,
         }
 
 class ResourcesSelect(discord.ui.Select):
@@ -15,8 +16,15 @@ class ResourcesSelect(discord.ui.Select):
                  label="General Search",
                  value="general_search",
                  emoji="🌐"
-                 )
+                 ),
+             discord.SelectOption(
+                label="Github Cyber Resources",
+                value="github_cyber",
+                emoji="📜"
 
+
+                 )
+                 
                 ]
 
         super().__init__(
