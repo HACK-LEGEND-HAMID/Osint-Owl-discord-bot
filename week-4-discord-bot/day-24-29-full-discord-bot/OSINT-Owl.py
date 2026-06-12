@@ -5,6 +5,10 @@ import os
 
 load_dotenv()
 
+intents = discord.Intents.default()
+intents.message_content = True
+
+
 class MyBot(commands.Bot):
     def __init__(self):
         super().__init__(
@@ -16,6 +20,7 @@ class MyBot(commands.Bot):
         await self.load_extension("cogs.media")
         await self.load_extension("cogs.moderation")
         await self.load_extension("cogs.resources_cog")
+        await self.load_extension("cogs.mhakai")
         await self.tree.sync()
 
 bot = MyBot()
