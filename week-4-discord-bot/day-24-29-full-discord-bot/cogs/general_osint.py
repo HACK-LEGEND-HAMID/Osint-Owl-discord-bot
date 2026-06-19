@@ -2,10 +2,9 @@ import discord
 from discord.ext import commands
 from discord import app_commands
 from .resources.general_search import GENERAL_SEARCH, SOCIAL_MEDIA_TOOLS,TWITTER_TOOLS,FACEBOOK_TOOLS,REDDIT_TOOLS,USERNAME_CHECK_TOOLS,NATIONAL_SEARCH_ENGINES,META_SEARCH_ENGINES,CODE_SEARCH_TOOLS,EMAIL_OSINT_TOOLS,PHONE_OSINT_TOOLS,DOMAIN_IP_TOOLS
-from .resources.github_cyber import GITHUB_CYBER
-RESOURCES = {
+
+GENERAL_OSINT_TOOLS = {
         "general_search":GENERAL_SEARCH,
-        "github_cyber":GITHUB_CYBER,
         "social_media_tools":SOCIAL_MEDIA_TOOLS,
         "twitter_tools":TWITTER_TOOLS,
         "facebook_tools":FACEBOOK_TOOLS,       
@@ -19,7 +18,7 @@ RESOURCES = {
         "domain_ip_tools":DOMAIN_IP_TOOLS,
 }
 
-class ResourcesSelect(discord.ui.Select):
+class General_osintSelect(discord.ui.Select):
     def __init__(self):
 
         options =[
@@ -113,7 +112,7 @@ class ResourcesSelect(discord.ui.Select):
 
         embed = discord.Embed(
          title=f"{category.replace('_'," ").title()}",
-       description=RESOURCES[category]
+       description=GENERAL_OSINT_TOOLS[category]
         )
 
         await interaction.response.send_message(
@@ -122,19 +121,19 @@ class ResourcesSelect(discord.ui.Select):
         )
 
 
-class ResourceView(discord.ui.View):
+class General_osintView(discord.ui.View):
     def __init__(self):
         super().__init__(timeout=None)
-        self.add_item(ResourcesSelect())
+        self.add_item(General_osintSelect())
 
 
-class Resources(commands.Cog):
+class General_osint(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
     @app_commands.command(
-        name="resources",
-        description="View OSINT resources"
+        name="general_osint",
+        description="View OSINT Tools"
     )
     async def resources(
         self,
@@ -142,15 +141,15 @@ class Resources(commands.Cog):
     ):
 
         embed = discord.Embed(
-            title=":books: OSINT Resources",
+            title=":books:General OSINT Tools ",
             description="Choose a category from the dropdown menu below."
         )
 
         await interaction.response.send_message(
             embed=embed,
-            view=ResourceView()
+            view=General_osintView()
         )
 
 
 async def setup(bot):
-    await bot.add_cog(Resources(bot))
+    await bot.add_cog(General_osint(bot))
