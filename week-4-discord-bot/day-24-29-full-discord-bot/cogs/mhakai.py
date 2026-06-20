@@ -27,13 +27,6 @@ Keep responses concise and direct unless the user requests a detailed explanatio
 Limit most responses to a reasonable length.
 """
 
-ALLOWED_ROLE_IDS = [
-    int(os.getenv("FOUNDER_ROLE_ID")),
-    int(os.getenv("COFOUNDER_ROLE_ID")),
-    int(os.getenv("ADMIN_ROLE_ID")),
-    int(os.getenv("MODERATOR_ROLE_ID"))
-]
-
 
 class AI(commands.Cog):
     def __init__(self, bot):
@@ -48,8 +41,21 @@ class AI(commands.Cog):
         interaction: discord.Interaction,
         prompt: str
     ):
+        
 
-        if not any(role.id in ALLOWED_ROLE_IDS for role in interaction.user.roles):
+        if interaction.user.id == 1352440514498269255:
+            pass
+
+        elif interaction.user.id == 1375147373335941283:
+            pass
+
+        elif interaction.user.id == 1502702326551675082:
+            pass
+
+        elif interaction.user.id == 1501332111817441422:
+            pass
+
+        else:
             await interaction.response.send_message(
                 "❌ You don't have permission to use this command.",
                 ephemeral=True
