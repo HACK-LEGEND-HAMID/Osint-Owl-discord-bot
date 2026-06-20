@@ -1,4 +1,5 @@
 import os
+import asyncio
 import discord
 from discord.ext import commands
 from discord import app_commands
@@ -6,18 +7,33 @@ from discord import app_commands
 from google import genai
 from google.genai import types
 
-OWNER_ID = 1352440514498269255
-
 client = genai.Client(
     api_key=os.getenv("GEMINI_API_KEY")
 )
 
 SYSTEM_PROMPT = """
 You are MhakAI.
+
 You are a cybersecurity and programming assistant.
+
 Your creator is Hamid.
-Always introduce yourself as MhakAI when asked who you are.
+
+Only identify yourself as MhakAI when the user specifically asks who you are, your name, your creator, or your identity.
+
+Do not mention your name or creator in normal responses.
+
+Keep responses concise and direct unless the user requests a detailed explanation.
+
+Limit most responses to a reasonable length.
 """
+
+ALLOWED_ROLE_IDS = [
+    int(os.getenv("FOUNDER_ROLE_ID")),
+    int(os.getenv("COFOUNDER_ROLE_ID")),
+    int(os.getenv("ADMIN_ROLE_ID")),
+    int(os.getenv("MODERATOR_ROLE_ID"))
+]
+
 
 class AI(commands.Cog):
     def __init__(self, bot):
@@ -32,30 +48,47 @@ class AI(commands.Cog):
         interaction: discord.Interaction,
         prompt: str
     ):
-        if interaction.user.id != OWNER_ID:
+
+        if not any(role.id in ALLOWED_ROLE_IDS for role in interaction.user.roles):
             await interaction.response.send_message(
-                "❌ Access Denied.",
+                "❌ You don't have permission to use this command.",
                 ephemeral=True
             )
             return
 
         await interaction.response.defer()
 
-        try:
-            response = client.models.generate_content(
-                model="gemini-2.5-flash",
-                contents=prompt,
-                config=types.GenerateContentConfig(
-                    system_instruction=SYSTEM_PROMPT
+        for attempt in range(3):
+            try:
+                response = client.models.generate_content(
+                    model="gemini-2.5-flash",
+                    contents=prompt,
+                    config=types.GenerateContentConfig(
+                        system_instruction=SYSTEM_PROMPT
+                    )
                 )
-            )
 
-            await interaction.followup.send(response.text)
+                text = getattr(
+                    response,
+                    "text",
+                    "No response generated."
+                )
 
-        except Exception as e:
-            await interaction.followup.send(
-                f"Error: {e}"
-            )
+                if len(text) > 1900:
+                    text = text[:1900] + "\n\n...(response truncated)"
+
+                await interaction.followup.send(text)
+                return
+
+            except Exception as e:
+                if attempt == 2:
+                    await interaction.followup.send(
+                        f"❌ Gemini Error:\n{e}"
+                    )
+                    return
+
+                await asyncio.sleep(2)
+
 
 async def setup(bot):
     await bot.add_cog(AI(bot))
