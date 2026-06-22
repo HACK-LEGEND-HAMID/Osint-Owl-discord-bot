@@ -1,9 +1,11 @@
 import discord
 from discord.ext import commands
 from discord import app_commands
-from .resources.python_resources import PYTHON_BASICS
+from .resources.python_resources import PYTHON_BASICS, PYTHON_INTERMEDIATE, PYTHON_ADVANCED
 PYTHON_RESOURCES = {
         "python_basics":PYTHON_BASICS,
+        "python_intermediate":PYTHON_INTERMEDIATE,
+        "python_advanced":PYTHON_ADVANCED,
 }
 
 class Python_resourcesSelect(discord.ui.Select):
@@ -14,6 +16,16 @@ class Python_resourcesSelect(discord.ui.Select):
                  label="Python Basics",
                  value="python_basics",
                  emoji="🌐"
+                 ),
+             discord.SelectOption(
+                label="Python Intermediate",
+                value="python_intermediate",
+                emoji="📘"
+                 ),
+             discord.SelectOption(
+                label="Python Advanced",
+                value="python_advanced",
+                emoji="🌀 "
                  ),
            ]
 
@@ -31,7 +43,7 @@ class Python_resourcesSelect(discord.ui.Select):
         embed = discord.Embed(
          title=f"{category.replace('_',' ').title()}",
          description=PYTHON_RESOURCES[category],
-         color=discord.Color.blue()  
+         color=discord.Color.green()  
       )
 
         await interaction.response.send_message(

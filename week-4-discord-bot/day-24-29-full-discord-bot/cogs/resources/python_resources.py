@@ -1,15 +1,50 @@
 PYTHON_BASICS = """
-📘 W3Schools - Beginner-friendly platform offering interactive Python tutorials, examples, quizzes, and exercises. Great for learning Python fundamentals step by step.
+📘 Python.org - Official Python tutorials and documentation.
+🔗 https://python.org
 
-🐍 LearnPython.org - Free interactive Python learning website with hands-on coding exercises covering variables, loops, functions, classes, and more.
+📖 W3Schools - Interactive Python lessons for beginners.
+🔗 https://www.w3schools.com/python/
 
-💡 GeeksforGeeks - Comprehensive programming resource with Python tutorials, interview preparation guides, coding challenges, and advanced computer science topics.
+🚀 Programiz - Easy-to-understand Python tutorials with examples.
+🔗 https://www.programiz.com/python-programming
 
-🚀 Programiz - Easy-to-understand Python tutorials with practical examples, explanations, and an online compiler for testing code.
+🎓 freeCodeCamp - Free Python courses and beginner projects.
+🔗 https://www.freecodecamp.org/
 
-🎓 freeCodeCamp - Free learning platform featuring Python courses, projects, certifications, and full-length video tutorials for beginners and advanced learners.
+💡 Real Python - Beginner-friendly Python guides and tutorials.
+🔗 https://realpython.com/
+"""
 
-📖 Python Crash Course - Popular beginner-friendly Python book by Eric Matthes that teaches programming fundamentals through practical projects and exercises.
+PYTHON_INTERMEDIATE = """
+⚙️ GeeksforGeeks - Python development skills and practical concepts.
+🔗 https://www.geeksforgeeks.org/blogs/top-python-developer-skills/
 
-⚙️ Automate the Boring Stuff with Python - Best-selling book by Al Sweigart focused on automating repetitive tasks such as file management, web scraping, spreadsheets, and data processing using Python.
+🐍 HackerRank - Python challenges and coding practice.
+🔗 https://www.hackerrank.com/domains/python
+
+🔧 Automate the Boring Stuff with Python - Automation projects.
+🔗 https://automatetheboringstuff.com/
+
+💻 LeetCode - Problem solving and algorithms.
+🔗 https://leetcode.com/
+
+📚 Corey Schafer - Excellent intermediate Python tutorials.
+🔗 https://www.youtube.com/@Coreyms
+"""
+
+PYTHON_ADVANCED = """
+🤖 Kaggle - Machine Learning, Data Science, and AI projects.
+🔗 https://www.kaggle.com/code/scratchpad/notebook33a8d025bb/edit
+
+📖 Python Documentation - Advanced language features and internals.
+🔗 https://docs.python.org/3/
+
+⚡ FastAPI - High-performance API development.
+🔗 https://fastapi.tiangolo.com/
+
+🚀 Django Documentation - Advanced web applications and scaling.
+🔗 https://docs.djangoproject.com/
+
+🔬 PyTorch Tutorials - Deep Learning and neural networks.
+🔗 https://pytorch.org/tutorials/
 """
