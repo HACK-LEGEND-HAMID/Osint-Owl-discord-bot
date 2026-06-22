@@ -25,7 +25,7 @@ class Python_resourcesSelect(discord.ui.Select):
              discord.SelectOption(
                 label="Python Advanced",
                 value="python_advanced",
-                emoji="🌀 "
+                emoji="🌀"
                  ),
            ]
 
