@@ -1,11 +1,13 @@
 import discord
 from discord.ext import commands
 from discord import app_commands
-from .resources.python_resources import PYTHON_BASICS, PYTHON_INTERMEDIATE, PYTHON_ADVANCED
+from .resources.python_resources import PYTHON_BASICS, PYTHON_INTERMEDIATE, PYTHON_ADVANCED, DISCORD_BOT
+
 PYTHON_RESOURCES = {
         "python_basics":PYTHON_BASICS,
         "python_intermediate":PYTHON_INTERMEDIATE,
         "python_advanced":PYTHON_ADVANCED,
+        "discord_bot":DISCORD_BOT,
 }
 
 class Python_resourcesSelect(discord.ui.Select):
@@ -27,7 +29,13 @@ class Python_resourcesSelect(discord.ui.Select):
                 value="python_advanced",
                 emoji="🌀"
                  ),
-           ]
+             discord.SelectOption(
+                label="Discord Bot Project",
+                value="discord_bot",
+                emoji="🤖"
+
+                ), 
+          ]
 
         super().__init__(
              placeholder="Select a resources category...",

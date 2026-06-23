@@ -48,3 +48,51 @@ PYTHON_ADVANCED = """
 🔬 PyTorch Tutorials - Deep Learning and neural networks.
 🔗 https://pytorch.org/tutorials/
 """
+DISCORD_BOT = """
+## Discord Bot Development Resources
+
+### 1. Official Discord Bots Documentation
+https://docs.discord.com/developers/platform/bots
+
+Official Discord documentation for bot development.
+Learn how Discord bots work, permissions,
+gateway events, interactions, slash commands,
+OAuth2, and best practices.
+
+### 2. discord.py Quickstart
+https://discordpy.readthedocs.io/en/stable/quickstart.html
+
+Official discord.py quickstart guide.
+Covers installation, first bot creation,
+commands, events, intents, and bot structure.
+
+### 3. Real Python Discord Bot Tutorial
+https://realpython.com/how-to-make-a-discord-bot-python/#what-is-discord
+
+Beginner-friendly guide explaining Discord,
+bots, APIs, and bot creation step-by-step.
+
+### 4. GeeksforGeeks Discord Bot Tutorial
+https://www.geeksforgeeks.org/python/discord-bot-in-python/
+
+Simple tutorial covering setup, bot tokens,
+commands, and basic functionality.
+
+### 5. freeCodeCamp Discord Bot Guide
+https://www.freecodecamp.org/news/create-a-discord-bot-with-python/
+
+Comprehensive guide covering bot creation,
+commands, events, deployment, and features.
+
+### 6. YouTube Video Tutorial
+https://youtu.be/SPTfmiYiuok?si=QUNKpq59R4Bzxq95
+
+Video tutorial for visual learners with
+practical examples and live coding.
+
+### 7. WispByte Hosting
+https://wispbyte.com/
+
+Hosting provider for deploying Python Discord bots
+and keeping them online 24/7.
+"""
