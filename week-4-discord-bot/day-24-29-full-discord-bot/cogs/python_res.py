@@ -1,13 +1,14 @@
 import discord
 from discord.ext import commands
 from discord import app_commands
-from .resources.python_resources import PYTHON_BASICS, PYTHON_INTERMEDIATE, PYTHON_ADVANCED, DISCORD_BOT
+from .resources.python_resources import PYTHON_BASICS, PYTHON_INTERMEDIATE, PYTHON_ADVANCED, DISCORD_BOT, WEB_SCRAPING
 
 PYTHON_RESOURCES = {
         "python_basics":PYTHON_BASICS,
         "python_intermediate":PYTHON_INTERMEDIATE,
         "python_advanced":PYTHON_ADVANCED,
         "discord_bot":DISCORD_BOT,
+        "web_scraping":WEB_SCRAPING,
 }
 
 class Python_resourcesSelect(discord.ui.Select):
@@ -35,6 +36,11 @@ class Python_resourcesSelect(discord.ui.Select):
                 emoji="🤖"
 
                 ), 
+             discord.SelectOption(
+                label="Web Scraping",
+                value="web_scraping",
+                emoji="🦀"
+             )
           ]
 
         super().__init__(

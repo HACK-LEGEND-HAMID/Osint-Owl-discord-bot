@@ -96,3 +96,43 @@ https://wispbyte.com/
 Hosting provider for deploying Python Discord bots
 and keeping them online 24/7.
 """
+WEB_SCRAPING = """
+🌐 W3Schools - Web scraping basics with BeautifulSoup.
+🔗 https://www.w3schools.com/python/python_web_scraping.asp
+
+📚 Real Python - Complete BeautifulSoup tutorial with real examples.
+🔗 https://realpython.com/beautiful-soup-web-scraper-python/
+
+⚡ GeeksforGeeks - Web scraping step-by-step guide.
+🔗 https://www.geeksforgeeks.org/implementing-web-scraping-python-beautiful-soup/
+
+🎯 Programiz - Easy web scraping for beginners.
+🔗 https://www.programiz.com/python-programming/web-scraping
+
+📖 BeautifulSoup Docs - Everything about HTML parsing.
+🔗 https://www.crummy.com/software/BeautifulSoup/bs4/doc/
+
+🔧 Requests Library - HTTP requests made simple.
+🔗 https://docs.python-requests.org/en/latest/
+
+🎮 Quotes to Scrape - Practice scraping quotes.
+🔗 http://quotes.toscrape.com/
+
+📊 Books to Scrape - Practice scraping products.
+🔗 http://books.toscrape.com/
+
+🧪 ScrapingClub - Free practice with solutions.
+🔗 https://scrapingclub.com/
+
+💻 John Watson Rooney - Web scraping projects (YouTube).
+🔗 https://www.youtube.com/@JohnWatsonRooney
+
+🎥 CodeWithHarry (Hindi) - Web scraping tutorial.
+🔗 https://youtube.com/playlist?list=PLu0W_9lII9agq5TrH9XLIKQvv0iaFckXQ
+
+🔍 Scrapy Framework - Advanced web crawling.
+🔗 https://docs.scrapy.org/en/latest/
+
+📝 Awesome Web Scraping - Curated tools list.
+🔗 https://github.com/lorien/awesome-web-scraping
+"""
