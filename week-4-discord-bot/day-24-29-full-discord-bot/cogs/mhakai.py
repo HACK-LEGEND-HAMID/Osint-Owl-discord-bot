@@ -24,7 +24,7 @@ Do not mention your name or creator in normal responses.
 
 Keep responses concise and direct unless the user requests a detailed explanation.
 
-Limit most responses to a reasonable length.
+Limit most responses to a reasonable length.The limit is 30 lines 
 """
 
 
@@ -43,16 +43,7 @@ class AI(commands.Cog):
     ):
         
 
-        if interaction.user.id == 1352440514498269255:
-            pass
-
-        elif interaction.user.id == 1375147373335941283:
-            pass
-
-        elif interaction.user.id == 1502702326551675082:
-            pass
-
-        elif interaction.user.id == 1501332111817441422:
+        if interaction.member.roles == 1517524608637730856:
             pass
 
         else:
