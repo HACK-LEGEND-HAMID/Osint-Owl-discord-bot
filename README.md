@@ -2,10 +2,10 @@
 
 ## Zero → Hero → Discord Bot Developer
 
-🔰 WEEK 1: Foundation      ████████████████████ 100%
-📦 WEEK 2: Functions       ████████████████████ 100%
-🏗️ WEEK 3: OOP & APIs      ████████████████████ 100%
-🤖 WEEK 4: Discord Bot     ███████████████████░ 99%
+- 🔰 WEEK 1: Foundation      ████████████████████ 100%
+- 📦 WEEK 2: Functions       ████████████████████ 100%
+- 🏗️ WEEK 3: OOP & APIs      ████████████████████ 100%
+- 🤖 WEEK 4: Discord Bot     ███████████████████░ 99%
 
 ## 🗺️ ROADMAP
 🔰 WEEK 1: BASICS (Days 1-7)
