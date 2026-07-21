@@ -52,7 +52,7 @@ class AI(commands.Cog):
         elif interaction.user.id == 1501332111817441422:
             pass
         elif interaction.user.id == 1190051109159583891:
-
+            pass
         else:
             await interaction.response.send_message(
                 "❌ You don't have permission to use this command.",

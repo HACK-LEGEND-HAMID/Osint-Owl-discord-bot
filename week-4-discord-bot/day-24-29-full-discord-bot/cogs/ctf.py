@@ -10,5 +10,11 @@ class CTF(commands.Cog):
 
     @app_commands.command(name="ctf", description="Use this Command for CTF Task")
     async def ctf(self, interaction: discord.Interaction, name: str, age: int):
-        await interaction.response.send_message(f"My name is {name} and Age is {age}")
-    
+        if name == "hamid":
+           message = "Real"
+        else:
+           message = "Fake"
+
+        await interaction.response.send_message(message)
+async def setup(bot):
+    await bot.add_cog(CTF(bot))
