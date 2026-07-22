@@ -24,7 +24,7 @@ class CTF(commands.Cog):
         self.start_time = datetime.now()
         self.submissions = {}
 
-        await interaction.response.send_message(f"✅ CTF Started!\nFlag: ||{flag}||\n⏰ 24 Hours Timer ON")
+        await interaction.response.send_message(f"✅ CTF Started!\nFlag: ||Unknown||\n⏰ 24 Hours Timer ON")
 
     @app_commands.command(name="ctf_submit", description="Submit Your Flag")
     async def ctf_submit(self, interaction: discord.Interaction, answer: str):
