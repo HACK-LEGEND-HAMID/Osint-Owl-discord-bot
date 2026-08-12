@@ -24,6 +24,7 @@ class MyBot(commands.Bot):
         await self.load_extension("cogs.lua_res")
         await self.load_extension("cogs.python_res")
         await self.load_extension("cogs.ctf")
+        await self.load_extension("cogs.game")
         await self.tree.sync()
 
 bot = MyBot()
